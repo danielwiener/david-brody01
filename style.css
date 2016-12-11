@@ -257,9 +257,10 @@ h1.page-title {
   margin-left: auto;
 }
 
-h4 {
-	padding-left: 15px; /*DW*/
-}
+.term-film h4 {
+	/*padding-left: 15px;*/ 
+	margin-top: 0px;
+} /*DW*/
 
 @media (min-width: 768px) {
   .container_text {
