@@ -43,7 +43,7 @@ get_header(); ?>
 								<?php if(has_post_thumbnail()): ?>
 							<?php the_post_thumbnail('medium', array('title' => get_the_title() )); ?>
 							<?php endif; ?></div></a>
-								<div class="col-lg-9 col-sm-8 col-xs-12"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><?php the_excerpt(); ?><a href="<?php the_permalink(); ?>">Read more and view video</a></div><div class="clearfix"></div>
+								<div class="col-lg-9 col-sm-8 col-xs-12"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><?php the_excerpt(); ?><a href="<?php the_permalink(); ?>">Read more and view video</a></div>
 							
 					<hr />
 					
