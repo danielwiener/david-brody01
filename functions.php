@@ -75,6 +75,15 @@ function dw_boot_setup() {
 endif; // dw_boot_setup
 add_action( 'after_setup_theme', 'dw_boot_setup' );
 
+// Register the three useful image sizes for use in Add Media modal
+// https://wpshout.com/adding-using-custom-image-sizes-wordpress-guide-best-thing-ever/
+add_filter( 'image_size_names_choose', 'dw_custom_sizes' );
+function dw_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'Thumbnail 300' => __( 'Thumbnail 300' ),
+    ) );
+}
+
 /**
  * Register widget area.
  *
