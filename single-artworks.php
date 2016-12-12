@@ -32,14 +32,14 @@ get_header(); ?>
 							 ?>
 						<div class="dw_image_nav">
 						<?php previous_post_link( '%link', '<i class="fa fa-chevron-left icon-2x"></i>', TRUE, ' ', 'portfolios' ); ?> &nbsp;<a href="<?php echo site_url(); ?>/portfolio/<?php echo $portfolio_slug ?>"><i class="fa fa-th icon-2x"></i></a> &nbsp;<?php next_post_link( '%link', '<i class="fa fa-chevron-right icon-2x"></i>', TRUE, ' ', 'portfolios' ); ?></div>
-					<div class="dw_vertical_image">	<?php
+						<?php
 							/* translators: %s: Name of current post */
 							the_content( sprintf(
 								__( 'Continue reading %s', 'twentyfifteen' ),
 								the_title( '<span class="screen-reader-text">', '</span>', false )
 							) );
 
-						?></div>
+						?>
 					</div><!-- .entry-content -->
 
 	
