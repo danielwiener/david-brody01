@@ -160,18 +160,6 @@ function add_responsive_class($content){
 add_filter        ('the_content', 'add_responsive_class');
 
 
-// http://stackoverflow.com/questions/23831682/how-can-i-enlarge-the-default-55-words-on-excerpt-function-in-wordpress
-/**
- * Filter the except length to 20 words.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
-// function wpdocs_custom_excerpt_length( $length ) {
-//     return 20;
-// }
-// add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
 //https://bavotasan.com/2009/limiting-the-number-of-words-in-your-excerpt-or-content-in-wordpress/
 function excerpt($limit) {
   $excerpt = explode(' ', get_the_excerpt(), $limit);
