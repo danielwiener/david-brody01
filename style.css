@@ -262,10 +262,32 @@ h1.page-title {
 	margin-top: 0px;
 } /*DW*/
 
+/* For displaying single column on mobile 
+http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gallery-item-responsive */
+@media (max-width: 360px) {
+ .gallery-columns-2 .gallery-item,  .gallery-columns-3 .gallery-item {
+     width: 100%;
+	max-width: 100%;
+ }
+
+ .gallery-columns-4 .gallery-item,  .gallery-columns-5 .gallery-item {
+	 width: 50%;
+	max-width: 50%;
+} 
+}
+
 @media (min-width: 768px) {
   .container_text {
     width: 750px;
   }
+.gallery-columns-5 .gallery-item {
+	max-width: 19%;
+}
+
+.gallery-columns-5 .gallery-item img{
+	width: 100%;
+	height: auto;
+}
 }
 @media (min-width: 992px) {
   .container_text {
@@ -321,12 +343,35 @@ h1.page-title {
 	width: auto;
 	z-index: 100000;
 }
-
+/*dw for dev only*/
 .single-artworks .container {
-	border: 1px solid red !important;
-	background-color: #DDD;
+/*	border: 1px solid red !important;
+	background-color: #DDD;*/
 }
 
 .excerpt_left {
 	float: left;
+}
+
+/*--------------------------------------------------------------
+3.0 Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
