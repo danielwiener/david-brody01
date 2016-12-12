@@ -216,11 +216,42 @@ p > video {
 	border: none;
 }
 
-.navbar-default {
+.navbar-default { 
     background-color: rgba(252, 252, 250, 0.97) !important;
+	background-color: rgba(255, 255, 255) !important;
 	font-family: "freight-sans-pro","Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 300;
+
+} /*dw- navbar*/
+
+/*dw *http://presscustomizr.com/snippet/change-navbar-colorsfontsize/*/
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a {
+
+color:          #000;                        
+
+}
+
+/* Adjust Menu colors - Hover */
+.navbar .nav > li > a:hover, .navbar .nav > li > a:hover:first-letter { 
+color:          #337ab7;                      
+text-shadow:    none;
+}
+/* Adjust Menu colors - Active */
+.navbar .nav > li > a:active, .navbar .nav > li > a:active:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a,
+.navbar .nav > li.current-menu-item > a:first-letter, 
+.navbar .nav > li.current-menu-ancestor > a:first-letter {
+/*color:          red;
+text-shadow:    none;*/
+}
+
+.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color:          #337ab7;                      
+	text-shadow:    none;
 }
 
 .navbar-brand {
@@ -300,6 +331,8 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
   }
 
 }
+
+
 
 /**
  * 7.0 Accessibility
