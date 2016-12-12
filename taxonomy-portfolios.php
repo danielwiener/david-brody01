@@ -8,7 +8,9 @@
  * @since Daniel Wiener 1.0
  */
 
-get_header(); ?>
+get_header(); 
+$dw_switcher = 1;
+?>
 
 <div id="primary" class="container content-area">
 	<main id="main" class="site-main" role="main">
@@ -36,13 +38,22 @@ get_header(); ?>
 					);
 					$portfolio_query = new WP_Query( $portfolio_args ); 
 				/* Start the Loop */ ?>
-				<div  class="row">
+				<div  class="row" id="ms-container">
 				<?php while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>
+					<?php if ($dw_switcher==1): ?>
+						
+					
+						<div class="ms-item">
+						<h2 class="post-title"><a href="<?php // the_permalink(); ?>" class="post-title-link"><?php // the_title(); ?></a></h2>
+						<a href="<?php the_permalink(); ?>" class="post-title-link">	
+						<?php the_post_thumbnail('medium'); ?>
+						</a><br>
+						<?php
+						echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+						</div>
 
-				
 
-
-							
+					<?php else: ?>		
 							<div class="col-lg-3 col-sm-4 col-xs-6">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="thumbnail">
 								<?php if(has_post_thumbnail()): ?>
@@ -50,7 +61,7 @@ get_header(); ?>
 							<?php endif; ?>
 								</a></div>
 							
-					
+					<?php endif ?>
 					
 				<?php endwhile; ?>
 </div>
@@ -75,4 +86,17 @@ get_header(); ?>
 		</section><!-- #primary .site-content -->
 
 <?php // get_sidebar(); ?>
+<script type="text/javascript">
+//http://www.wpdevsolutions.com/implement-masonry-in-wordpress/
+jQuery(window).load(function() {
+
+// MASSONRY Without jquery
+var container = document.querySelector('#ms-container');
+var msnry = new Masonry( container, {
+  itemSelector: '.ms-item',
+  columnWidth: '.ms-item',                
+});  
+
+  });
+</script>
 <?php get_footer(); ?>

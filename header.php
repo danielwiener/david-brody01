@@ -21,6 +21,7 @@
 	<?php wp_head(); ?>
 	<script src="//use.typekit.net/yko4doz.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 </head>
 <body <?php body_class(); ?>>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">

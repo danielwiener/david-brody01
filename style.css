@@ -192,6 +192,10 @@ p > video {
 	border: 1px solid green;
 }
 
+.dw_image_nav {
+	padding: 28px 0 0 0;
+}
+
 .dw_image_nav a:link, .dw_image_nav a:visited {
 	color: #000;
 }
@@ -217,7 +221,7 @@ p > video {
 }
 
 .navbar-default { 
-    background-color: rgba(252, 252, 250, 0.97) !important;
+    /*background-color: rgba(252, 252, 250, 0.97) !important;*/
 	background-color: rgba(255, 255, 255) !important;
 	font-family: "freight-sans-pro","Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1.2em;
@@ -281,6 +285,13 @@ h1.page-title {
 	font-weight: 300;
 }
 
+.artworks h1.page-title {
+	font-size: 26px;
+	color: #666;
+	font-weight: 300;
+	margin-left: -15px;
+}
+
 .container_text {
   padding-right: 15px;
   padding-left: 15px;
@@ -319,11 +330,24 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 	width: 100%;
 	height: auto;
 }
+.navbar-default { 
+
+	font-size: 1em;
+
+
+} /*dw- navbar*/
+
 }
 @media (min-width: 992px) {
   .container_text {
     width: 970px;
   }
+.navbar-default { 
+
+	font-size: 1.2em;
+
+
+} /*dw- navbar*/
 }
 @media (min-width: 1200px) {
   .container_text {
@@ -407,4 +431,47 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.ms-item img{
+	width: 100%;
+	height: auto;
+}
+
+.ms-item {
+width: 92%;
+padding:    0px 4% 0 4%;
+margin-bottom:10px;
+/*border: 1px solid #999;*/
+}
+
+@media screen and (min-width: 600px){
+/* Makes two columns */
+.ms-item {
+width: 45%;
+padding:    0px 2% 0 0px;
+margin-right:2%;
+margin-bottom:0px;
+/*border: 1px solid #999;*/
+}
+
+}
+@media screen and (min-width: 768px){
+/* Makes 2 columns */
+.ms-item {
+width: 49%;
+margin-right:0%;
+margin-bottom:0px;
+padding:    0px 2% 0 0px;
+/*border: 1px solid #999;*/
+}
+
+@media screen and (min-width: 810px){
+/* Makes three columns */
+.ms-item {
+width: 32%;
+margin-right:0%;
+margin-bottom:0px;
+padding:    0px 2% 0 0px;
+/*border: 1px solid #999;*/
 }

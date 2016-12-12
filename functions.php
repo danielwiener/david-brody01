@@ -101,23 +101,24 @@ function dw_custom_sizes( $sizes ) {
  *
  * @since DW Bootstrap 1.0
  */
-function dw_boostrap_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'dw_boostrap_javascript_detection', 0 );
+// function dw_boostrap_javascript_detection() {
+// 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+// }
+// add_action( 'wp_head', 'dw_boostrap_javascript_detection', 0 );
 
 /**
  * Enqueue scripts and styles
  */
 function dw_bootstrap_scripts() {
 	
-	//wp_enqueue_style( 'dw_bootstrap_theme', get_stylesheet_directory_uri() . '/joy_theme.css');
-	wp_enqueue_style( 'dw_bootstrap_bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css');
-	wp_enqueue_style( 'dw_bootstrap-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-		wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/js/bootstrap.js', array( 'jquery' ) );
-		    wp_enqueue_script( 'bootstrap-jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' );
-	
+			wp_enqueue_style( 'dw_bootstrap_bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css');
+			wp_enqueue_style( 'dw_bootstrap-style', get_stylesheet_uri() );
+			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+			
+			wp_enqueue_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/js/bootstrap.js', array( 'jquery' ) );
+
+			
+		    //wp_enqueue_script( 'bootstrap-jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' );	
 }
 add_action( 'wp_enqueue_scripts', 'dw_bootstrap_scripts' );
 
@@ -173,19 +174,19 @@ function excerpt($limit) {
   return $excerpt;
 }
  
-function content($limit) {
-  $content = explode(' ', get_the_content(), $limit);
-  if (count($content)>=$limit) {
-    array_pop($content);
-    $content = implode(" ",$content).'...';
-  } else {
-    $content = implode(" ",$content);
-  }	
-  $content = preg_replace('/\[.+\]/','', $content);
-  $content = apply_filters('the_content', $content); 
-  $content = str_replace(']]>', ']]&gt;', $content);
-  return $content;
-}
+// function content($limit) {
+//   $content = explode(' ', get_the_content(), $limit);
+//   if (count($content)>=$limit) {
+//     array_pop($content);
+//     $content = implode(" ",$content).'...';
+//   } else {
+//     $content = implode(" ",$content);
+//   }	
+//   $content = preg_replace('/\[.+\]/','', $content);
+//   $content = apply_filters('the_content', $content); 
+//   $content = str_replace(']]>', ']]&gt;', $content);
+//   return $content;
+// }
 
 /**
  * Filter the "read more" excerpt string link to the post.
