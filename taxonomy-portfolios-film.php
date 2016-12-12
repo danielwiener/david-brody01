@@ -22,7 +22,7 @@ get_header(); ?>
 					<h1 class="page-title"><?php echo $this_portfolio->name; ?></h1>
 				</header>
 
-				
+			
 				<?php 
 					$portfolio_args = array(
 					    'posts_per_page'  => -1,
@@ -34,18 +34,32 @@ get_header(); ?>
 					);
 					$portfolio_query = new WP_Query( $portfolio_args ); 
 				/* Start the Loop */ ?>
+				
+						<?php $count=0; ?>	
 				<div  class="row">
 				<?php while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>
-					
+					<?php if ($dw_switcher == 1): ?>
 				<div class="col-lg-3 col-sm-4 col-xs-12">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="thumbnail">
 								<?php if(has_post_thumbnail()): ?>
 							<?php the_post_thumbnail('medium', array('title' => get_the_title() )); ?>
 							<?php endif; ?></div></a>
-								<div class="col-lg-9 col-sm-8 col-xs-12"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><?php the_excerpt(); ?><a href="<?php the_permalink(); ?>">Read more and view video</a></div>
-							
-					<hr />
+								<div class="col-lg-3 col-sm-8 col-xs-12"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><?php echo excerpt(30); ?><br /><a href="<?php the_permalink(); ?>">Read more and view video</a></div>
+								<?php if ($count%2 == 1): ?>
+									<div class="clearfix"></div>
+						<hr />
+								<?php endif ?>
+							<?php 	$count++;  ?>						
 					
+					<?php else: ?>
+					<div class="col-lg-3 col-sm-4 col-xs-12">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="thumbnail">
+									<?php if(has_post_thumbnail()): ?>
+								<?php the_post_thumbnail('medium', array('title' => get_the_title() )); ?>
+								<?php endif; ?></div></a>
+									<div class="col-lg-9 col-sm-8 col-xs-12"><h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4><?php the_excerpt(); ?><a href="<?php the_permalink(); ?>">Read more and view video</a></div><div class="clearfix"></div>
+						<hr />
+					<?php endif; ?>
 				<?php endwhile; ?>
 </div>
 			
