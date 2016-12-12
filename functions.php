@@ -140,7 +140,8 @@ function add_responsive_class($content){
 
         $imgs = $document->getElementsByTagName('img');
         foreach ($imgs as $img) {           
-           $img->setAttribute('class','img-responsive');
+           	$existing_class = $img->getAttribute('class');
+			$img->setAttribute('class', "img-responsive $existing_class"); //adding existing class and img-responsive
         }
 
         $html = $document->saveHTML();
@@ -148,3 +149,57 @@ function add_responsive_class($content){
 }
 
 add_filter        ('the_content', 'add_responsive_class');
+
+
+// http://stackoverflow.com/questions/23831682/how-can-i-enlarge-the-default-55-words-on-excerpt-function-in-wordpress
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+// function wpdocs_custom_excerpt_length( $length ) {
+//     return 20;
+// }
+// add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+//https://bavotasan.com/2009/limiting-the-number-of-words-in-your-excerpt-or-content-in-wordpress/
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  }	
+  $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+  return $excerpt;
+}
+ 
+function content($limit) {
+  $content = explode(' ', get_the_content(), $limit);
+  if (count($content)>=$limit) {
+    array_pop($content);
+    $content = implode(" ",$content).'...';
+  } else {
+    $content = implode(" ",$content);
+  }	
+  $content = preg_replace('/\[.+\]/','', $content);
+  $content = apply_filters('the_content', $content); 
+  $content = str_replace(']]>', ']]&gt;', $content);
+  return $content;
+}
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ * https://developer.wordpress.org/reference/functions/the_excerpt/
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
