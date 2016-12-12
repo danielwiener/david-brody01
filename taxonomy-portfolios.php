@@ -28,7 +28,7 @@ get_header(); ?>
 				<?php 
 					$portfolio_args = array(
 					    'posts_per_page'  => -1,
-						'orderby'         => 'menu_order',  //change this once you add years
+						'orderby'         => 'menu_order date',  //change this once you add years
 						 'order'           => 'DESC',
 					    'post_type'       => 'artworks',
 						'post_status'	=> 'publish',
