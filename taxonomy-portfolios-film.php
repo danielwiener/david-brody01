@@ -9,6 +9,7 @@
  */
 
 get_header(); ?>
+	<?php $dw_switcher = 1; ?>
 <div id="primary" class="container content-area">
 	<main id="main" class="site-main" role="main">
 			<?php if ( have_posts() ) : ?>
