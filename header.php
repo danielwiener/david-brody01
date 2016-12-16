@@ -19,9 +19,8 @@
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	<script src="//use.typekit.net/yko4doz.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+	<script src="https://use.typekit.net/agg2ruq.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body <?php body_class(); ?>>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
