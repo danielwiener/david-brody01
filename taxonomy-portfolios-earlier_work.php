@@ -40,11 +40,9 @@ $dw_switcher = 1;
 						
 					
 						<div class="ms-item">
-						<h2 class="post-title"><a href="<?php // the_permalink(); ?>" class="post-title-link"><?php // the_title(); ?></a></h2>
 						<a href="/portfolio/earlier_work/<?php echo $term->slug; ?>" class="post-title-link">	
 						<?php the_term_thumbnail($term->term_id, 'medium'); ?>
-						</a><br>
-						<a href="/portfolio/earlier_work/<?php echo $term->slug; ?>" class="post-title-link"><?php echo $term->name; ?></a>
+						<p class="centered-title"><?php echo $term->name; ?></a></p>
 						</div>
 
 

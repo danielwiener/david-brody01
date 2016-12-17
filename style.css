@@ -304,6 +304,13 @@ h1.page-title {
 	margin-top: 0px;
 } /*DW*/
 
+.centered-title {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 600;
+	font-family: "futura-pt","Helvetica Neue", Helvetica, Arial, sans-serif;
+} /*DW for titles under Earlier Work*/
+
 /* For displaying single column on mobile 
 http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gallery-item-responsive */
 @media (max-width: 360px) {
