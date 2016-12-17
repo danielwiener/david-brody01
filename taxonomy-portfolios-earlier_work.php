@@ -1,7 +1,7 @@
 <?php
 /**
- * The template for displaying Archive page for Exhibits.
- *
+ * The template for displaying template page for Earlier Work Portfolio. Made to show sub-categories of Earlier Work, such as 2011-2014
+ * used and dependent on https://wordpress.org/plugins/sf-taxonomy-thumbnail/ Taxonomy Thumbnail Plugin
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Daniel Wiener
@@ -19,51 +19,46 @@ $dw_switcher = 1;
 
 				<header>
 					<?php
-					$term_id = $wp_query->queried_object->term_id;
+					$terms = get_terms( array(
+					    'taxonomy' 		=> 'portfolios',
+					    'child_of' 		=> 2, //dw this is the id of Earlier Work
+						'hide_empty' 	=> false,
+						'orderby'		=> 'slug',
+						'order'			=> 'DESC'
+					) );
 					
-					$this_portfolio = get_term( $term_id, 'portfolios' );
+					
 					?>
-					<h1 class="page-title"><?php echo $this_portfolio->name; ?></h1>
+					<h1 class="page-title">Earlier Work</h1>
 				</header>
 
 				
-				<?php 
-					$portfolio_args = array(
-					    'posts_per_page'  => -1,
-						'orderby'         => 'menu_order date',  //change this once you add years
-						 'order'           => 'DESC',
-					    'post_type'       => 'artworks',
-						'post_status'	=> 'publish',
-						'portfolios'			=> $this_portfolio->slug
-					);
-					$portfolio_query = new WP_Query( $portfolio_args ); 
-				/* Start the Loop */ ?>
+				<?php  /* Start the Loop */ ?>
 				<div  class="row" id="ms-container">
-				<?php while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>
+				<?php foreach ($terms as $term): ?>		
 					<?php if ($dw_switcher==1): ?>
 						
 					
 						<div class="ms-item">
 						<h2 class="post-title"><a href="<?php // the_permalink(); ?>" class="post-title-link"><?php // the_title(); ?></a></h2>
-						<a href="<?php the_permalink(); ?>" class="post-title-link">	
-						<?php the_post_thumbnail('medium'); ?>
+						<a href="/portfolio/earlier_work/<?php echo $term->slug; ?>" class="post-title-link">	
+						<?php the_term_thumbnail($term->term_id, 'medium'); ?>
 						</a><br>
-						<?php
-						echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+						<a href="/portfolio/earlier_work/<?php echo $term->slug; ?>" class="post-title-link"><?php echo $term->name; ?></a>
 						</div>
 
 
 					<?php else: ?>		
 							<div class="col-lg-3 col-sm-4 col-xs-6">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="thumbnail">
-								<?php if(has_post_thumbnail()): ?>
-							<?php the_post_thumbnail('Thumbnail 300', array('class' => 'alignleft', 'title' => get_the_title() )); ?>
+								<?php if(has_term_thumbnail()): ?>
+							<?php the_term_thumbnail('Thumbnail 300', array('class' => 'alignleft', 'title' => get_the_title() )); ?>
 							<?php endif; ?>
 								</a></div>
 							
 					<?php endif ?>
 					
-				<?php endwhile; ?>
+				<?php endforeach ?>
 </div>
 			
 
