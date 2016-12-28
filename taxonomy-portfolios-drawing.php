@@ -39,9 +39,9 @@ $dw_switcher = 1;
 					<?php if ($dw_switcher==1): ?>
 						
 					
-						<div class="ms-item">
+						<div class="ms-item-drawing">
 						<a href="/portfolio/earlier_work/<?php echo $term->slug; ?>" class="post-title-link">	
-						<?php the_term_thumbnail($term->term_id, 'medium'); ?>
+						<?php the_term_thumbnail($term->term_id, 'large'); ?>
 						<p class="centered-title"><?php echo $term->name; ?></a></p>
 						</div>
 
@@ -86,8 +86,8 @@ jQuery(window).load(function() {
 // MASSONRY Without jquery
 var container = document.querySelector('#ms-container');
 var msnry = new Masonry( container, {
-  itemSelector: '.ms-item',
-  columnWidth: '.ms-item',                
+  itemSelector: '.ms-item-drawing',
+  columnWidth: '.ms-item-drawing',                
 });  
 
   });

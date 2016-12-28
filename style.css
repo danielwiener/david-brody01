@@ -440,7 +440,7 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 	margin-right: auto;
 }
 
-.ms-item img{
+.ms-item img, .ms-item-drawing img{
 	width: 100%;
 	height: auto;
 }
@@ -477,6 +477,13 @@ padding:    0px 2% 0 0px;
 /* Makes three columns */
 .ms-item {
 width: 32%;
+margin-right:0%;
+margin-bottom:0px;
+padding:    0px 2% 0 0px;
+/*border: 1px solid #999;*/
+}
+.ms-item-drawing {
+width: 48%;
 margin-right:0%;
 margin-bottom:0px;
 padding:    0px 2% 0 0px;
