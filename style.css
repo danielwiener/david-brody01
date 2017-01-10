@@ -447,9 +447,16 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 
 .ms-item {
 width: 92%;
-padding:    0px 4% 0 4%;
+padding:   0 4% 0 4%;
 margin-bottom:10px;
-/*border: 1px solid #999;*/
+
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+	font-family: "Noto Sans", sans-serif;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+
 }
 
 @media screen and (min-width: 600px){
@@ -469,7 +476,7 @@ margin-bottom:0px;
 width: 49%;
 margin-right:0%;
 margin-bottom:0px;
-padding:    0px 2% 0 0px;
+padding:    2% 2% 0 0px;
 /*border: 1px solid #999;*/
 }
 
@@ -479,8 +486,7 @@ padding:    0px 2% 0 0px;
 width: 32%;
 margin-right:0%;
 margin-bottom:0px;
-padding:    0px 2% 0 0px;
-/*border: 1px solid #999;*/
+padding:    2% 2% 0 0px;
 }
 .ms-item-drawing {
 width: 48%;
