@@ -44,7 +44,6 @@ $dw_switcher = 1;
 						
 					
 						<div class="ms-item">
-						<h2 class="post-title"><a href="<?php // the_permalink(); ?>" class="post-title-link"><?php // the_title(); ?></a></h2>
 						<a href="<?php the_permalink(); ?>" class="post-title-link">	
 						<?php the_post_thumbnail('medium'); ?>
 						</a><br>
