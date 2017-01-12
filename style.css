@@ -323,6 +323,12 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 	 width: 50%;
 	max-width: 50%;
 } 
+
+.container {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
 }
 
 @media (min-width: 768px) {
@@ -446,7 +452,7 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 }
 
 .ms-item {
-width: 92%;
+/*width: 92%;*/
 padding:   0 4% 0 4%;
 margin-bottom:10px;
 
