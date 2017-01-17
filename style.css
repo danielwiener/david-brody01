@@ -223,9 +223,9 @@ p > video {
 .navbar-default { 
     /*background-color: rgba(252, 252, 250, 0.97) !important;*/
 	background-color: rgba(255, 255, 255) !important;
-	font-family: "futura-pt","Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 1.2em;
-	font-weight: 300;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+
 
 } /*dw- navbar*/
 
@@ -275,8 +275,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-font-family: "futura-pt","Helvetica Neue", Helvetica, Arial, sans-serif !important;
-font-weight: bold;	
+font-family: "Courier New", Courier, monospace;
 }
 
 h1.page-title {
@@ -308,7 +307,7 @@ h1.page-title {
 	text-align: center;
 	font-size: 22px;
 	font-weight: 600;
-	font-family: "futura-pt","Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Courier New", Courier, monospace;
 } /*DW for titles under Earlier Work*/
 
 /* For displaying single column on mobile 
@@ -357,7 +356,7 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
   }
 .navbar-default { 
 
-	font-size: 1.3em;
+	font-size: 1.1em;
 
 
 } /*dw- navbar*/
