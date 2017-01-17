@@ -85,7 +85,7 @@ p > video {
  */
 
 .wp-caption {
-	margin-bottom: 1.6em;
+	margin-bottom: -9px;
 	max-width: 100%;
 }
 
@@ -97,7 +97,7 @@ p > video {
 .wp-caption-text {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -222,7 +222,7 @@ p > video {
 
 .navbar-default { 
     /*background-color: rgba(252, 252, 250, 0.97) !important;*/
-	background-color: rgba(255, 255, 255) !important;
+
 	font-family: "Courier New", Courier, monospace;
 	font-size: 1em;
 	text-transform: uppercase;
@@ -234,9 +234,7 @@ p > video {
 .navbar .nav > li > a, .navbar .nav > li > a:first-letter,
 .navbar .nav > li.current-menu-item > a, 
 .navbar .nav > li.current-menu-ancestor > a {
-
 color:          #000;                        
-
 }
 
 /* Adjust Menu colors - Hover */
@@ -254,7 +252,7 @@ text-shadow:    none;
 .navbar .nav > li.current-menu-ancestor > a:first-letter {
 /*color:          red;
 text-shadow:    none;*/
-
+	/*background-color: #FF9900;*/
 }
 
 .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {

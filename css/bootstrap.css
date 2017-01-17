@@ -1090,7 +1090,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+	background-color: #E6E6E6; /*DW*/
 }
 input,
 button,
@@ -3054,7 +3054,8 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #333;
-  background-color: #e6e6e6;
+  /*background-color: #e6e6e6;*/
+	background-color: #FF9900;
   border-color: #adadad;
 }
 .btn-default:active,
@@ -4400,16 +4401,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default {
 /*  background-color: #f8f8f8;
   border-color: #e7e7e7;*/ /*dw makes this white*/
-  background-color: #fff;
-  border-color: #fff;
+/* background-color: #E6E6E6;*/ /*David's BG color*/
+ /* border-color: #E6E6E6;*/
+ background-color: #fff; /*white menu bg daniel likes it better*/
+  border-color: #e6e6e6;
+
 }
 .navbar-default .navbar-brand {
   color: #777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
-  background-color: transparent;
+  color: #000;
+  background-color: #FF9900;
 }
 .navbar-default .navbar-text {
   color: #777;
@@ -4426,7 +4430,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555;
-  background-color: #e7e7e7;
+  /*background-color: #e7e7e7;*/ /*DW changed for David*/
+	font-weight: bold;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4452,7 +4457,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #555;
-  background-color: #e7e7e7;
+ /* background-color: #e7e7e7;*/
+	background-color: #FF9900; /*DW for david*/
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
