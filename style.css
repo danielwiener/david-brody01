@@ -314,6 +314,15 @@ h1.page-title {
 	font-family: "Courier New", Courier, monospace;
 } /*DW for titles under Earlier Work*/
 
+.centered-title a, .centered-title a:visited {
+	color: black;
+}
+
+.centered-title a:hover, .centered-title a:focus {
+	color: red;
+	text-decoration: none;
+}
+
 /* For displaying single column on mobile 
 http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gallery-item-responsive */
 @media (max-width: 360px) {
