@@ -19,8 +19,6 @@
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	<script src="https://use.typekit.net/agg2ruq.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 </head>
 <body <?php body_class(); ?>>
@@ -34,10 +32,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="<?php echo home_url(); ?>">
-	                <?php bloginfo('name'); ?>
-	            </a>
-	    </div>
+	      <a class="navbar-brand" href="<?php echo home_url(); ?>">DAVID BRODY</a></div>
 
 	        <?php // http://stackoverflow.com/questions/25332527/convert-bootstrap-navbar-to-wordpress-menu
 				// https://github.com/twittem/wp-bootstrap-navwalker
