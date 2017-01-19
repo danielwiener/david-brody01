@@ -85,7 +85,7 @@ p > video {
  */
 
 .wp-caption {
-	margin-bottom: -9px;
+	/*margin-bottom: -9px;*/
 	max-width: 100%;
 }
 
