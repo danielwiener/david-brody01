@@ -340,6 +340,14 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 
 }
 
+@media (max-width: 768px) { /*VERY IMPORTANT DW THIS IS FOR GALLERY IMAGES IN SIZES LESS THAN 768 SO THAT THEY DON'T CROWD. Deals with the inline widths created by WP for images where images stay the same size even if their div container shrinks. this works with the image itself.*/
+.gallery-icon img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+}
+
 @media (min-width: 768px) {
   .container_text {
     width: 750px;
