@@ -348,6 +348,12 @@ http://wordpress.stackexchange.com/questions/185961/making-wordpress-gallery-gal
 }
 }
 
+@media (max-width: 414px) { /*DW this is for aligned left images causing a very skinny column of text on phones*/
+	.alignleft {
+		float: none !important;
+	}
+}
+
 @media (min-width: 768px) {
   .container_text {
     width: 750px;
