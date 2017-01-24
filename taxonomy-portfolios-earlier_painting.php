@@ -29,7 +29,7 @@ $dw_switcher = 1;
 					
 					
 					?>
-					<h1 class="page-title">Earlier Work</h1>
+					<h1 class="page-title">Earlier Painting</h1>
 				</header>
 
 				
