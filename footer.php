@@ -14,14 +14,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<?php
-				/**
-				 * Fires before the Twenty Fifteen footer text for footer customization.
-				 *
-				 * @since Twenty Fifteen 1.0
-				 */
-				do_action( 'twentyfifteen_credits' );
-			?>
+			&nbsp;
+			<hr />
 		
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
